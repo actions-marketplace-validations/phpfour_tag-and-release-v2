@@ -1,5 +1,6 @@
 const core = require('@actions/core');
-const { GitHub, context } = require('@actions/github');
+const github = require('@actions/github');
+const context = github.context;
 
 async function main() {
   const commit = core.getInput('commit') || context.sha;
